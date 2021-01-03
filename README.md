@@ -10,5 +10,6 @@ Mein Haushaltsbuch (Docker basiert)
 
 3) Template Dateien kopieren & anpassen
 - php_mobile_accounting/lib/Database.php.template => Database.php
+- php_mobile_accounting/htaccess.template => .htaccess
 - myhhb/docker-compose.yml.template => docker-compose.yml
 - myhhb/Dockerfile.template => Dockerfile
