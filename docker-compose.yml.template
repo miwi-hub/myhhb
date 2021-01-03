@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - [your port]:8080
+
+  httpd:
+    build: .
+    restart: always
+    ports:
+      - [your port]:80
+    volumes:
+      - [your path to www folder]:/var/www/html
+
+  db:
+    image: postgres:alpine
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: example
+    volumes:
+      - [your path to docker entrypoint initdb folder]:/docker-entrypoint-initdb.d
+      - [your path to postgres data folder]:/var/lib/postgresql/data
